@@ -115,16 +115,31 @@ namespace BinarySearchTree
                 }
                 else if (curr.ChildrenCount == 2)
                 {
-                    Node successor = GetMin(curr.Right);
+                    Node successor = Min(curr.Right);
                     curr.Key = successor.Key;
                     Delete(successor);
                 }
             }
         }
 
-        public Node GetMin(Node n=null)
+        public Node Min(Node n=null)
         {
             if(n==null)
+            {
+                n = Root;
+            }
+
+            Node curr = n;
+            while (curr.Left != null)
+            {
+                curr = curr.Left;
+            }
+            return curr;
+        }
+
+        public Node Max(Node n = null)
+        {
+            if (n == null)
             {
                 n = Root;
             }
