@@ -115,7 +115,7 @@ namespace BinarySearchTree
                 }
                 else if (curr.ChildrenCount == 2)
                 {
-                    Node successor = Min(curr.Right);
+                    Node successor = Min(curr.Right);//get the next higher key, which is the smallest from the current node's right branch
                     curr.Key = successor.Key;
                     Delete(successor);
                 }
@@ -225,13 +225,13 @@ namespace BinarySearchTree
                 if(curr!=null)
                 {
                     stack.Push(curr);
-                    curr = curr.Left;
+                    curr = curr.Left;//move to left child
                 }
                 else
                 {
-                    curr = stack.Pop();                    
+                    curr = stack.Pop();
                     items.Add(curr.Key);
-                    curr = curr.Right;
+                    curr = curr.Right;//move to right child
                 }
 
             }
