@@ -1,6 +1,8 @@
 BinarySearchTree in C#
 ================
 
+[![Build status](https://ci.appveyor.com/api/projects/status/8lgxn4qjl9pm0n9s?svg=true)](https://ci.appveyor.com/project/jeff-pang/binarysearchtree)
+
 This project is a basic C# BST implementation. It demonstrate a few simple operations of BST:
 * Find
 * Insert
